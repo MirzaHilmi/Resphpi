@@ -1,0 +1,22 @@
+{
+    "name": "mirzahilmi/resphpi",
+    "description": "Resphpi is a dynamic response formatter based on JSend specification, enabling APIs to communicate seamlessly with elegant, simple and structured JSON data.",
+    "type": "library",
+    "require": {
+        "php": ">=7.3",
+        "illuminate/http": ">=8.x-dev"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "MirzaHilmi\\Resphpi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MirzaHilmi",
+            "email": "exquisitemirza@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
