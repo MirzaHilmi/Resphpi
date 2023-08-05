@@ -16,9 +16,7 @@ class Res
      * Private constructor to prevent direct instantiation of the class.
      * This class only provides static methods for creating responses.
      */
-    private function __construct()
-    {
-    }
+    private function __construct() {}
 
     /**
      * Create a JSON response for a successful operation.
@@ -28,11 +26,11 @@ class Res
      * @param array $headers Additional headers to be added to the response. Default: empty array.
      * @return JsonResponse The JSON response with 'success' status and optional data.
      */
-    public static function success(mixed $data = null, int $statusCode = 200, array $headers = []): JsonResponse
+    public static function success($data = null, int $statusCode = 200, array $headers = []): JsonResponse
     {
         return new JsonResponse([
             'status' => 'success',
-            'data' => $data
+            'data'   => $data,
         ], $statusCode, $headers);
     }
 
@@ -44,27 +42,27 @@ class Res
      * @param array $headers Additional headers to be added to the response. Default: empty array.
      * @return JsonResponse The JSON response with 'fail' status and optional data.
      */
-    public static function fail(mixed $data = null, int $statusCode = 400, array $headers = []): JsonResponse
+    public static function fail($data = null, int $statusCode = 400, array $headers = []): JsonResponse
     {
         return new JsonResponse([
             'status' => 'fail',
-            'data' => $data
+            'data'   => $data,
         ], $statusCode, $headers);
     }
 
     /**
      * Create a JSON response for an error.
      *
-     * @param string $data The error message to be included in the response. Default: null.
+     * @param mixed $data The error message to be included in the response. Default: null.
      * @param int $statusCode The HTTP status code of the response. Default: 500.
      * @param array $headers Additional headers to be added to the response. Default: empty array.
      * @return JsonResponse The JSON response with 'error' status and optional error message.
      */
-    public static function error(string $data = null, int $statusCode = 500, array $headers = []): JsonResponse
+    public static function error($data = null, int $statusCode = 500, array $headers = []): JsonResponse
     {
         return new JsonResponse([
             'status' => 'error',
-            'data' => $data
+            'data'   => $data,
         ], $statusCode, $headers);
     }
 }
