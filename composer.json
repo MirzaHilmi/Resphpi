@@ -9,7 +9,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "MirzaHilmi\\Resphpi\\": "src/"
+            "Resphpi\\": "src/"
         }
     },
     "authors": [
